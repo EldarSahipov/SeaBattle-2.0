@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<form>
+  <div class="container">
+    <h1>Регистрация</h1>
+    <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
+    <hr>
+    <label><b>Логин</b></label>
+    <input type="text" placeholder="Введите логин" id="login" name="">
+
+    <label><b>Никнейм</b></label>
+    <input type="text" placeholder="Введите новый никнейм" id="nickname" name="">
+
+    <label><b>Пароль</b></label>
+    <input type="password" placeholder="Введите пароль" id="psw">
+
+    <label><b>Повторите пароль</b></label>
+    <input type="password" placeholder="Введите ещё раз пароль" id="psw-repeat">
+    <!--        <hr>-->
+    <!--        <p>Создавая учетную запись, вы соглашаетесь с нашими <a href="#">Условиями и Политикой конфиденциальности.</a>.</p>-->
+
+    <button type="button" onclick=saveUser()>Зарегистрироваться</button>
+  </div>
+
+  <div class="container signin">
+    <p>Уже есть аккаунт? <a href="#">Войти</a>.</p>
+  </div>
+</form>
+</body>
+<script type="text/javascript" src="js/registration.js"></script>
+</html>
