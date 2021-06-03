@@ -1,10 +1,9 @@
 package com.seabattle.seabattle.DAO;
 
 import com.seabattle.seabattle.model.Profile;
-import com.seabattle.seabattle.model.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -49,6 +48,15 @@ public class ProfileDao {
     public List<Profile> findAll() {
         List<Profile> profiles = (List<Profile>)  HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From Profile").list();
         return profiles;
+    }
+
+    public Profile findByUsers_Id(int user_id) {
+        Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
+        String hql = "from Profile where user_id = " + "'" + user_id + "'";
+        Query query = session.createQuery(hql);
+        List<Profile> profileList = query.list();
+        session.close();
+        return profileList.get(0);
     }
 
 }

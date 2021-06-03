@@ -1,0 +1,37 @@
+table {
+    font-family: Sans-Serif;
+    font-size: 25px;
+    text-align: center;
+    border: 1px solid #69c;
+    border-collapse: separate;
+    empty-cells: hide;
+    margin-left: 800px;
+    margin-top: 100px;
+}
+
+
+th, td {
+    border: 2px solid #69c;
+    background-color: blue;
+    color: blue;
+}
+td{
+    width: 30px;
+    height: 30px;
+}
+
+.grayy {
+    background-color: gray;
+    color: gray;
+}
+
+.redy {
+    background-color: red;
+    color: red;
+}
+
+
+.greeny {
+    background-color: green;
+    color: green;
+}

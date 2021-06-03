@@ -10,7 +10,6 @@ public class SeaBattleApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SeaBattleApplication.class, args);
-        System.out.println("Main");
     }
 
 }

@@ -2,6 +2,7 @@ package com.seabattle.seabattle.rest;
 
 import com.seabattle.seabattle.DAO.UserDao;
 import com.seabattle.seabattle.model.Player;
+import com.seabattle.seabattle.model.Profile;
 import com.seabattle.seabattle.model.User;
 import com.seabattle.seabattle.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class UsersRestController {
     private UserDao userDao;
 
     @PostMapping("/regist")
-    @PreAuthorize("hasAuthority('users:read')")
+    @PreAuthorize("permitAll()")
     public void saveUser(@RequestBody User user) {
         userDao.saveUser(user);
     }
@@ -46,6 +47,8 @@ public class UsersRestController {
     public List<User> findAll() {
         return userDao.findAll();
     }
+
+
 
 
 }
