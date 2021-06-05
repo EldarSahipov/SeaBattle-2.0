@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
+  <link rel="stylesheet" href="css/reg.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous"></script>
@@ -15,8 +16,7 @@
     <p>Пожалуйста, заполните эту форму, чтобы создать учетную запись.</p>
     <hr>
     <label><b>Логин</b></label>
-    <input type="text" placeholder="Введите логин" id="login" name="">
-
+    <input type="text" placeholder="Введите логин" id="login" name="" required minlength="4" maxlength="24">
     <label><b>Никнейм</b></label>
     <input type="text" placeholder="Введите новый никнейм" id="nickname" name="">
 
@@ -32,7 +32,7 @@
   </div>
 
   <div class="container signin">
-    <p>Уже есть аккаунт? <a href="#">Войти</a>.</p>
+    <p>Уже есть аккаунт? <a href="http://localhost:8080/auth/login">Войти</a>.</p>
   </div>
 </form>
 </body>

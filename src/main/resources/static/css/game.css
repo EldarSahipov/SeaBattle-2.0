@@ -5,9 +5,25 @@ table {
     border: 1px solid #69c;
     border-collapse: separate;
     empty-cells: hide;
-    margin-left: 800px;
-    margin-top: 100px;
 }
+
+body{
+    background-image: url(https://i.artfile.ru/1920x1080_996610_[www.ArtFile.ru].jpg);
+}
+
+#but{
+    width: 430px;
+    height: 50px;
+    background-color: #6699cc;
+    margin-left: 200px;
+}
+
+
+
+#box {}
+#left { float: left; margin-left: 200px }
+#right { float: right; margin-right: 200px }
+
 
 
 th, td {
@@ -16,8 +32,8 @@ th, td {
     color: blue;
 }
 td{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 }
 
 .grayy {

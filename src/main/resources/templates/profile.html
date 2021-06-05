@@ -1,29 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Мой профиль</title>
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+  <meta charset="UTF-8">
+  <title>Мой профиль</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f66100;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Add padding to containers */
+    .container {
+      padding: 16px;
+      background-color: white;
+    }
+
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Overwrite default styles of hr */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    /* Set a style for the submit button */
+    .registerbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    .registerbtn:hover {
+      opacity: 1;
+    }
+
+    /* Add a blue text color to links */
+    a {
+      color: dodgerblue;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+
+    button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 320px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    button:hover span {
+      padding-right: 25px;
+    }
+
+    button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .table_dark {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+      font-size: 14px;
+      width: 640px;
+      text-align: left;
+      border-collapse: collapse;
+      background: #252F48;
+      margin: 10px;
+    }
+    .table_dark th {
+      color: #EDB749;
+      border-bottom: 1px solid #37B5A5;
+      padding: 12px 17px;
+    }
+    .table_dark td {
+      color: #CAD4D6;
+      border-bottom: 1px solid #37B5A5;
+      border-right:1px solid #37B5A5;
+      padding: 7px 17px;
+    }
+    .table_dark tr:last-child td {
+      border-bottom: none;
+    }
+    .table_dark td:last-child {
+      border-right: none;
+    }
+    .table_dark tr:hover td {
+      text-decoration: underline;
+    }
+    .text {
+      margin-left: 300px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+          crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-
-<div>
-<!--  Левая менюшка, переходы на другие страницы-->
+<div class="text">
+  <h2 id="rang">Рыбак</h2>
+  <h3>Очки</h3>
+  <h3>0/500</h3>
 </div>
-<div>
-<!-- Здесь будет фото в зависимости от ранга   -->
-</div>
-<div>
-    <h2 id="rang"></h2>
-    <h3>Очки</h3>
-
-    <h1>Статистика</h1>
-    <p>Боёв:</p>
-    <p>Побед:</p>
-    <p>Серия побед:</p>
+<div align="center">
+  <h1>Статистика</h1>
+  <table class="table_dark">
+    <tr>
+      <td>Боёв:</td><td>0</td>
+    </tr>
+    <tr>
+      <td>Побед:</td><td>0</td>
+    </tr>
+    <tr>
+      <td>Серия побед:</td><td>0</td>
+    </tr>
+  </table>
 </div>
 <form action="/auth/logout" method="POST">
-    <button type="submit">Выйти</button>
+  <button type="submit">Выйти</button>
 </form>
 </body>
 <script type="text/javascript" src="js/profile.js"></script>

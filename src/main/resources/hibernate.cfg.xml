@@ -19,8 +19,7 @@
         <property name="hibernate.connection.CharSet">utf8</property>
         <property name="hibernate.connection.characterEncoding">utf8</property>
         <property name="hibernate.connection.useUnicode">true</property>
-        <mapping class="com.seabattle.seabattle.model.Profile" />
-        <mapping class="com.seabattle.seabattle.model.User" />
-
+        <mapping class="com.seabattle.model.Profile" />
+        <mapping class="com.seabattle.model.User" />
     </session-factory>
 </hibernate-configuration>

@@ -2,9 +2,23 @@ body {
     background-size: cover;
 }
 h1 {
-    color: white;
+    color: #f4511e;
 }
-.button {
+
+h3 {
+    color: #f4511e;
+}
+
+.body_text {
+    background: rgba(3, 2, 2, 0.65);
+}
+
+.all {
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle
+}
+button {
     display: inline-block;
     border-radius: 4px;
     background-color: #f4511e;
@@ -19,14 +33,14 @@ h1 {
     margin: 5px;
 }
 
-.button span {
+button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-.button span:after {
+button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -35,11 +49,11 @@ h1 {
     transition: 0.5s;
 }
 
-.button:hover span {
+button:hover span {
     padding-right: 25px;
 }
 
-.button:hover span:after {
+button:hover span:after {
     opacity: 1;
     right: 0;
 }
